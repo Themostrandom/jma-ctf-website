@@ -1,0 +1,121 @@
+:root {
+  --primary-color: #007bff;
+  --bg-light: #f9faff;
+  --text-light: #212121;
+  --bg-dark: #121620;
+  --text-dark: #e1e1e1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body[data-theme='dark'] {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  background-color: var(--primary-color);
+  overflow-x: auto;
+}
+
+body[data-theme='dark'] .tabs {
+  background-color: #004a99;
+}
+
+.tab {
+  flex: 1 0 auto;
+  padding: 12px 16px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  user-select: none;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  background-color: #0056b3;
+}
+
+body[data-theme='dark'] .tab:hover {
+  background-color: #003366;
+}
+
+.tab.active {
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+body[data-theme='dark'] .tab.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid var(--primary-color);
+  margin-top: -1px;
+  background-color: white;
+  color: var(--text-light);
+}
+
+body[data-theme='dark'] .tab-content {
+  background-color: #1a1f2b;
+  border-color: #004a99;
+  color: var(--text-dark);
+}
+
+/* Theme toggle button fixed bottom-left */
+#theme-toggle {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  background: white;
+  color: var(--primary-color);
+  border-radius: 4px;
+  font-size: 14px;
+  user-select: none;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1000;
+}
+
+body[data-theme='dark'] #theme-toggle {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .tab-content {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+  #theme-toggle {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tab-content {
+    padding: 15px 12px;
+    font-size: 15px;
+  }
+  #theme-toggle {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}

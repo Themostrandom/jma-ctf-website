@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tabbed Site - Dark Theme Default</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="dark">
+
+<button id="theme-toggle">Switch to light mode</button>
+
+<div class="tabs" role="tablist">
+  <div class="tab active" role="tab" tabindex="0" aria-selected="true" aria-controls="home" id="tab-home">Home</div>
+  <div class="tab" role="tab" tabindex="-1" aria-selected="false" aria-controls="leaderboards" id="tab-leaderboards">Leaderboards/Stats</div>
+  <div class="tab" role="tab" tabindex="-1" aria-selected="false" aria-controls="community" id="tab-community">Community</div>
+  <div class="tab" role="tab" tabindex="-1" aria-selected="false" aria-controls="about" id="tab-about">About/Repos</div>
+</div>
+
+<div id="home" class="tab-content" role="tabpanel" aria-labelledby="tab-home">
+  <h2>Home</h2>
+  <p>Welcome to the home page.</p>
+</div>
+
+<div id="leaderboards" class="tab-content" role="tabpanel" aria-labelledby="tab-leaderboards" hidden>
+  <h2>Leaderboards and Stats</h2>
+  <p>Rankings and statistics available here.</p>
+</div>
+
+<div id="community" class="tab-content" role="tabpanel" aria-labelledby="tab-community" hidden>
+  <h2>Community</h2>
+  <p>Discussions, events, and community activities.</p>
+</div>
+
+<div id="about" class="tab-content" role="tabpanel" aria-labelledby="tab-about" hidden>
+  <h2>About and Repositories</h2>
+  <p>Project information and repository links.</p>
+</div>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
