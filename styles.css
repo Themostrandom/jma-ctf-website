@@ -14,6 +14,17 @@ body {
   color: var(--text-light);
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1; /* prend tout l'espace disponible */
+}
+
+
 body[data-theme='dark'] {
   background-color: var(--bg-dark);
   color: var(--text-dark);
@@ -29,6 +40,13 @@ body[data-theme='dark'] {
 body[data-theme='dark'] .tabs {
   background-color: #004a99;
 }
+
+.map-picture {
+  display: block;
+  margin-inline: auto;
+}
+
+
 
 .tab {
   flex: 1 0 auto;
@@ -118,4 +136,51 @@ body[data-theme='dark'] #theme-toggle {
     padding: 6px 10px;
     font-size: 14px;
   }
+}
+
+/* -------- HOME two columns layout -------- */
+.home-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.home-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.home-right {
+  flex: 0 0 300px; /* largeur image */
+}
+
+/* mobile : redevient 1 colonne */
+@media (max-width: 700px) {
+  .home-layout {
+    flex-direction: column;
+  }
+  .home-right {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.server-info {
+  margin-top: 15px;
+  padding: 10px 14px;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  max-width: 260px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
