@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  padding: 15px 45px;   /* top/bottom 15px — left/right 45px */
+  padding: 15px 45px;
   font-family: Arial, sans-serif;
   background-color: var(--bg-light);
   color: var(--text-light);
@@ -21,13 +21,12 @@ html, body {
   height: 100%;
 }
 
-/* .content is the main rectangular block that holds the site's content */
 .content {
   background-color: white;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  min-height: calc(100vh - 15px*2 - 64px); /* leave room for footer and page padding */
+  min-height: calc(100vh - 15px*2 - 64px);
   box-sizing: border-box;
 }
 
@@ -100,10 +99,9 @@ body[data-theme='dark'] .tab-content {
   color: var(--text-dark);
 }
 
-/* Theme toggle button fixed bottom-left */
 #theme-toggle {
   position: fixed;
-  bottom: 26px; /* above the footer */
+  bottom: 26px;
   left: 26px;
   padding: 6px 12px;
   cursor: pointer;
@@ -124,9 +122,7 @@ body[data-theme='dark'] #theme-toggle {
   border-color: white;
 }
 
-/* Responsiveness temporarily removed as requested (media queries deleted) */
 
-/* -------- HOME two columns layout -------- */
 .home-layout {
   display: flex;
   gap: 20px;
@@ -139,10 +135,9 @@ body[data-theme='dark'] #theme-toggle {
 }
 
 .home-right {
-  flex: 0 0 300px; /* largeur image */
+  flex: 0 0 300px;
 }
 
-/* Responsiveness removed: keep two-column layout for now */
 .home-layout {
   display: flex;
   gap: 20px;
@@ -151,6 +146,21 @@ body[data-theme='dark'] #theme-toggle {
 .home-right {
   flex: 0 0 300px;
   text-align: center;
+}
+
+.view-full-image {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.view-full-image:hover {
+  text-decoration: underline;
+}
+
+body[data-theme='dark'] .view-full-image {
+  color: #3291ff;
 }
 
 .server-info {
@@ -168,7 +178,7 @@ footer {
     background-color: #444;
     color: white;
     font-size: 14px;
-    position: fixed; /* stick to bottom */
+    position: fixed;
     left: 15px;
     right: 15px;
     bottom: 15px;
@@ -176,12 +186,187 @@ footer {
     z-index: 1000;
 }
 
-/* Make .content leave visual room for the footer */
 .content {
-  padding-bottom: 80px; /* ensures bottom content not hidden behind footer */
+  padding-bottom: 80px;
 }
 
-/* Dark theme variant for the content block and tabs */
+.community-links {
+  display: grid;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list li {
+  margin-bottom: 0.75rem;
+}
+
+.links-list a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.links-list a:hover {
+  color: #0056b3;
+}
+
+.community-section {
+  background-color: rgba(0, 123, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  position: relative;
+  padding-right: 140px;
+}
+
+.platform-header {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 6px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+
+.platform-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  border-radius: 8px;
+  margin: 0;
+  max-height: 128px;
+}
+
+.community-section h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.discord-link {
+  display: inline-block;
+  background-color: #5865F2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.discord-link:hover {
+  background-color: #4752C4;
+}
+
+.discord-stats {
+  background-color: rgba(88, 101, 242, 0.1);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  margin-right: 3rem;
+}
+
+.github-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.github-links li {
+  margin-bottom: 0.75rem;
+}
+
+.github-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.github-links a:hover {
+  color: #0056b3;
+}
+
+body[data-theme='dark'] .community-section {
+  background-color: rgba(0, 74, 153, 0.1);
+}
+
+body[data-theme='dark'] .discord-stats {
+  background-color: rgba(88, 101, 242, 0.2);
+}
+
+body[data-theme='dark'] .github-links a {
+  color: #3291ff;
+}
+
+body[data-theme='dark'] .github-links a:hover {
+  color: #66adff;
+}
+
+.contact-info {
+  margin-top: 1rem;
+}
+
+.contact-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #0056b3;
+}
+
+.license-link {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-top: 0.5rem;
+  transition: color 0.3s;
+}
+
+.license-link:hover {
+  color: #0056b3;
+}
+
+body[data-theme='dark'] .license-link {
+  color: #3291ff;
+}
+
+body[data-theme='dark'] .license-link:hover {
+  color: #66adff;
+}
+
+body[data-theme='dark'] .contact-info a {
+  color: #3291ff;
+}
+
+body[data-theme='dark'] .contact-info a:hover {
+  color: #66adff;
+}
+
 body[data-theme='dark'] .content {
   background-color: #0f1620;
   color: var(--text-dark);

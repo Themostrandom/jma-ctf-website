@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Tabbed Site - Dark Theme Default</title>
+      <title>JMA CTF Website</title>
       <link rel="stylesheet" href="styles.css" />
    </head>
    <body data-theme="dark">
@@ -13,7 +13,6 @@
          <div class="tab active" role="tab" tabindex="0" aria-selected="true" aria-controls="home" id="tab-home">Home</div>
          <div class="tab" role="tab" tabindex="-1" aria-selected="false" aria-controls="leaderboards" id="tab-leaderboards">Leaderboards/Stats</div>
          <div class="tab" role="tab" tabindex="-1" aria-selected="false" aria-controls="community" id="tab-community">Community</div>
-         <div class="tab" role="tab" tabindex="-1" aria-selected="false" aria-controls="about" id="tab-about">About/Repos</div>
       </div>
       <div id="home" class="tab-content" role="tabpanel" aria-labelledby="tab-home">
          <div class="home-layout">
@@ -51,14 +50,50 @@
       </div>
       <div id="community" class="tab-content" role="tabpanel" aria-labelledby="tab-community" hidden>
          <h2>Community</h2>
-         <p>Discussions, events, and community activities.</p>
-      </div>
-   <div id="about" class="tab-content" role="tabpanel" aria-labelledby="tab-about" hidden>
-         <h2>About and Repositories</h2>
-         <p>Project information and repository links.</p>
-      </div>
-	</div>
+         <div class="community-links">
+            <div class="community-section">
+               <h3>Discord Community</h3>
+               <div class="platform-header">
+                  <img src="images/discord.png" alt="Discord Logo" class="platform-logo">
+               </div>
+               <a href="https://ctf.jma-sig.de/" target="_blank" rel="noopener" class="community-link discord-link">Join our Discord Server</a>
+               <div class="discord-stats">
+                  <p>Online Members: <span id="discord-online">Loading...</span></p>
+                  <p>Total Members: <span id="discord-total">Loading...</span></p>
+               </div>
+            </div>
+            
+            <div class="community-section">
+               <h3>GitHub Repositories</h3>
+               <div class="platform-header">
+                  <img src="images/github.png" alt="GitHub Logo" class="platform-logo">
+               </div>
+               <ul class="github-links">
+                  <li><a href="https://github.com/Themostrandom/jma-ctf-website/tree/main" target="_blank" rel="noopener">JMA CTF Website Repository</a></li>
+                  <li><a href="https://github.com/Minetest-JMA-group/jma-capturetheflag" target="_blank" rel="noopener">JMA Capture The Flag Repository</a></li>
+                  <li><a href="https://github.com/Minetest-JMA-group/jma-maps" target="_blank" rel="noopener">JMA Maps Repository</a></li>
+               </ul>
+            </div>
 
+            <div class="community-section">
+               <h3>Content Database</h3>
+               <div class="platform-header">
+                  <img src="images/cdb.png" alt="ContentDB Logo" class="platform-logo">
+               </div>
+               <ul class="links-list">
+                  <li><a href="https://content.luanti.org/packages/rubenwardy/capturetheflag/" target="_blank" rel="noopener">Capture The Flag on ContentDB</a></li>
+               </ul>
+            </div>
+
+            <div class="community-section">
+               <h3>Contact & Legal</h3>
+               <div class="contact-info">
+                  <p><strong>Server Owner:</strong> <a href="mailto:loki@jma-sig.de">loki@jma-sig.de</a></p>
+                  <p><a href="LICENSE" target="_blank" rel="noopener" class="license-link">View License</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
 	<footer>
 		<p>Made by Themostrandom01 — JMA ctf website</p>
 	</footer>
