@@ -19,16 +19,24 @@ tabs.forEach((tab, i) => {
   });
 });
 
+// Theme management
+const loadTheme = () => {
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.body.setAttribute('data-theme', savedTheme);
+  themeToggleBtn.textContent = savedTheme === 'light' ? 'Switch to dark mode' : 'Switch to light mode';
+};
+
 // Theme toggle
 const themeToggleBtn = document.getElementById('theme-toggle');
 themeToggleBtn.addEventListener('click', () => {
   const body = document.body;
   const currentTheme = body.getAttribute('data-theme');
-  if (currentTheme === 'light') {
-    body.setAttribute('data-theme', 'dark');
-    themeToggleBtn.textContent = 'Switch to light mode';
-  } else {
-    body.setAttribute('data-theme', 'light');
-    themeToggleBtn.textContent = 'Switch to dark mode';
-  }
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  
+  body.setAttribute('data-theme', newTheme);
+  themeToggleBtn.textContent = newTheme === 'light' ? 'Switch to dark mode' : 'Switch to light mode';
+  localStorage.setItem('theme', newTheme);
 });
+
+// Load saved theme on page load
+loadTheme();

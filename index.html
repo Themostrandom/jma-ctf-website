@@ -8,6 +8,7 @@
    </head>
    <body data-theme="dark">
       <button id="theme-toggle">Switch to light mode</button>
+      <div class="content">
       <div class="tabs" role="tablist">
          <div class="tab active" role="tab" tabindex="0" aria-selected="true" aria-controls="home" id="tab-home">Home</div>
          <div class="tab" role="tab" tabindex="-1" aria-selected="false" aria-controls="leaderboards" id="tab-leaderboards">Leaderboards/Stats</div>
@@ -19,12 +20,8 @@
             <div class="home-left">
                <h2>Current map : Abandoned battlefield</h2>
                <!-- Ensure that it is only displayed if the value is positive. -->
-               <h3>
-               Duration : 1:30 
-               <h3>
-               <h3>
-               Mode: Nade Fight (2/3 matches)
-               <h3>
+               <h3>Duration : 1:30</h3>
+               <h3>Mode: Nade Fight (2/3 matches)</h3>
                <h3>Teams :</h3>
                <ul>
                   <li>🔴 player1, player2, player3</li>
@@ -56,12 +53,14 @@
          <h2>Community</h2>
          <p>Discussions, events, and community activities.</p>
       </div>
-      <div id="about" class="tab-content" role="tabpanel" aria-labelledby="tab-about" hidden>
+   <div id="about" class="tab-content" role="tabpanel" aria-labelledby="tab-about" hidden>
          <h2>About and Repositories</h2>
          <p>Project information and repository links.</p>
       </div>
-	 <footer>
-		<p>Made by Themostrandom01 and Farooq — JMA ctf website</p>
+	</div>
+
+	<footer>
+		<p>Made by Themostrandom01 — JMA ctf website</p>
 	</footer>
       <script src="scripts.js"></script>
    </body>
