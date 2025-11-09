@@ -115,4 +115,5 @@ async function loadServerData() {
 
 // Refresh every 10 seconds
 loadServerData();
-setInterval(loadServerData, 10000);
+setInterval(loadServerData, 1000);
+
