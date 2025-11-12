@@ -281,14 +281,6 @@ footer {
   background-color: #4752C4;
 }
 
-.discord-stats {
-  background-color: rgba(88, 101, 242, 0.1);
-  padding: 1rem;
-  border-radius: 4px;
-  margin-top: 1rem;
-  margin-right: 3rem;
-}
-
 .github-links {
   list-style: none;
   padding: 0;
@@ -313,10 +305,6 @@ footer {
 
 body[data-theme='dark'] .community-section {
   background-color: rgba(0, 74, 153, 0.1);
-}
-
-body[data-theme='dark'] .discord-stats {
-  background-color: rgba(88, 101, 242, 0.2);
 }
 
 body[data-theme='dark'] .github-links a {
@@ -378,4 +366,5 @@ body[data-theme='dark'] .content {
 body[data-theme='dark'] .tab.active {
   background-color: var(--primary-color);
   color: white;
+
 }
