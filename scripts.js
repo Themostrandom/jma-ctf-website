@@ -62,24 +62,3 @@ if (themeToggleBtn) {
 // Load saved theme on page load
 loadTheme();
 
-// Discord stats simulation
-function updateDiscordStats() {
-  const onlineElement = document.getElementById('discord-online');
-  const totalElement = document.getElementById('discord-total');
-  
-  if (onlineElement && totalElement) {
-    // Simulate some realistic numbers
-    const totalMembers = 150; // Base total members
-    const minOnline = Math.floor(totalMembers * 0.1); // At least 10% online
-    const maxAdditionalOnline = Math.floor(totalMembers * 0.3); // Up to 40% total online
-    const onlineMembers = minOnline + Math.floor(Math.random() * maxAdditionalOnline);
-    
-    onlineElement.textContent = onlineMembers;
-    totalElement.textContent = totalMembers;
-  }
-}
-
-// Update Discord stats initially and every 5 minutes
-updateDiscordStats();
-setInterval(updateDiscordStats, 5 * 60 * 1000);
-
