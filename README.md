@@ -68,5 +68,5 @@ A web dashboard to **display, read and analyze** the activity of a JMA Capture T
 
 ## 📜 License
 
-TBD
+MIT
 
